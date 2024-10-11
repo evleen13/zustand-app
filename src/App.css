@@ -4,7 +4,8 @@ ul {
 
 .main-container {
   padding: 2rem;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   background-color: #1e1e1e;
   color: #fff;
   display: flex;
@@ -18,7 +19,6 @@ ul {
   justify-content: center;
   align-items: center;
   width: 100%;
-  
 }
 
 .form-input {
@@ -66,3 +66,36 @@ ul {
   border: none;
   cursor: pointer;
 }
+
+.product-cards-wrapper {
+  display: flex;
+  gap: 24px;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 332px;
+  height: inherit;
+  padding: 16px;
+}
+
+.product-card__image {
+  width: 300px;
+  height: 300px;
+}
+
+.product-card__title {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.text-dark {
+  color: black;
+}
+

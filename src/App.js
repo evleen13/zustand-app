@@ -1,7 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import CourseForm from './components/CourseForm';
 import CourseList from './components/CourseList';
+import ProductListing from './components/ProductListing';
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <h2>My Course</h2>
       <CourseForm/>
       <CourseList/>
+      <ProductListing/>
     </div>
   );
 }
