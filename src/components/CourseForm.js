@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import useCourseStore from "../app/courseStore";
+import useCentralStore from "../app/centralStore";
 
 const CourseForm = () => {
-  const addCourse = useCourseStore((state) => state.addCourse);
+  const addCourse = useCentralStore((state) => state.addCourse);
   const [courseTitle, setCourseTitle] = useState("");
-  console.log("Course Rerendered");
   const handleCourseSubmit = () => {
     if (!courseTitle) {
       return alert("Please add course title");
     }
     addCourse({ id: Math.ceil(Math.random() * 100000), title: courseTitle });
-    setCourseTitle('');
+    setCourseTitle("");
   };
   return (
     <div className="form-container">

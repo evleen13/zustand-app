@@ -1,8 +1,8 @@
 import React from "react";
-import useCourseStore from "../app/courseStore";
+import useCentralStore from "../app/centralStore";
 
 const CourseList = () => {
-  const { courses, removeCourse, toggleCourseStatus } = useCourseStore(
+  const { courses, removeCourse, toggleCourseStatus } = useCentralStore(
     (state) => ({
       courses: state.courses,
       removeCourse: state.removeCourse,

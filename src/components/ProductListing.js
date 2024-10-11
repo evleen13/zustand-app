@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
-import useProductStore from "../app/productStore";
+import useCentralStore from "../app/centralStore";
 
 const ProductListing = () => {
-  const { products, getProducts, isLoading } = useProductStore((state) => ({
+  const { products, getProducts, isLoading } = useCentralStore((state) => ({
     products: state.products,
     getProducts: state.getProducts,
     isLoading: state.isLoading,
   }));
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [getProducts]);
 
   return (
     <>

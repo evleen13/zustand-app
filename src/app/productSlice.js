@@ -1,7 +1,4 @@
-import { create } from "zustand";
-import { devtools } from "zustand/middleware";
-
-const productStore = (set) => ({
+const productSlice = (set) => ({
   products: [],
   error: null,
   isLoading: false,
@@ -25,10 +22,4 @@ const productStore = (set) => ({
   },
 });
 
-const useProductStore = create(
-  devtools(productStore, {
-    name: "products",
-  })
-);
-
-export default useProductStore;
+export default productSlice;

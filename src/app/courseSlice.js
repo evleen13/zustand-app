@@ -1,8 +1,4 @@
-import { create } from "zustand";
-// persist stores all the store info into local storage of browser
-import { devtools, persist } from "zustand/middleware";
-
-const courseStore = (set) => ({
+const courseSlice = (set) => ({
   courses: [],
   addCourse: (course) => {
     set((state) => ({
@@ -21,13 +17,4 @@ const courseStore = (set) => ({
     }));
   },
 });
-
-const useCourseStore = create(
-  devtools(
-    persist(courseStore, {
-      name: "courses",
-    })
-  )
-);
-
-export default useCourseStore;
+export default courseSlice;
